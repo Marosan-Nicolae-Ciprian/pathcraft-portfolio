@@ -117,8 +117,8 @@ export default function Projects() {
                         key={cat.id}
                         onClick={() => setActiveCategory(cat.id as CategoryId)}
                         className={`px-5 py-2 rounded-full ${activeCategory === cat.id
-                            ? "bg-emerald-500"
-                            : "bg-gray-700"
+                                ? "bg-emerald-500"
+                                : "bg-gray-700"
                             }`}
                     >
                         {cat.label}
