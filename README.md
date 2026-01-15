@@ -1,73 +1,44 @@
-# React + TypeScript + Vite
+# 🌍 PathCraft Portfolio — Nicolae Ciprian Marosan
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bienvenue sur mon portfolio personnel !  
+Ce projet présente mon profil, mon parcours, mes compétences et mes projets autour des **Systèmes, Réseaux & Cybersécurité**.
 
-Currently, two official plugins are available:
+🔗 **Portfolio en ligne :**  
+👉 https://marosan-nicolae-ciprian.github.io/pathcraft-portfolio/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## ✨ Fonctionnalités
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+✅ Portfolio moderne et responsive  
+✅ Navigation fluide avec React Router  
+✅ Pages dédiées :
+- 🏠 Accueil (présentation)
+- 👤 À propos (+ téléchargement CV)
+- 🎓 Parcours (timeline + expériences)
+- 💻 Projets (filtrage + détails)
+- 📩 Contact (formulaire EmailJS)
 
-## Expanding the ESLint configuration
+✅ Animations & transitions (AOS)  
+✅ Design dark mode élégant (TailwindCSS)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠️ Stack Technique
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- ⚛️ **React (TypeScript)**
+- ⚡ **Vite**
+- 🎨 **TailwindCSS**
+- 🧭 **React Router DOM**
+- ✉️ **EmailJS**
+- ✨ **AOS (Animate On Scroll)**
+- 🚀 Déploiement via **GitHub Pages**
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📦 Installation & Lancement en local
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 1) Cloner le dépôt
+```bash
+git clone https://github.com/Marosan-Nicolae-Ciprian/pathcraft-portfolio.git
+cd pathcraft-portfolio
