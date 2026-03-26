@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@radix-ui/react-accordion": "^1.2.3",
     "@radix-ui/react-alert-dialog": "^1.1.6",
     "@radix-ui/react-aspect-ratio": "^1.1.2",
@@ -53,6 +54,7 @@
     "@tailwindcss/postcss": "^4.2.2",
     "@tailwindcss/vite": "4.1.12",
     "@types/node": "^20.10.0",
+    "@types/react": "^19.2.14",
     "@vitejs/plugin-react": "^4.7.0",
     "autoprefixer": "^10.4.27",
     "gh-pages": "^6.3.0",
@@ -61,9 +63,9 @@
     "vite": "^6.4.1"
   },
   "scripts": {
-  "dev": "vite",
-  "build": "vite build",
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d build"
+    "dev": "vite",
+    "build": "vite build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   }
 }
