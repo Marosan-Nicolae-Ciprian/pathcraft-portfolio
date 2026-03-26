@@ -1,35 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss' source(none);
+@source './**/*.{js,ts,jsx,tsx}';
+@import 'tw-animate-css';
+@import './styles/globals.css';
 
-/* Animation d'apparition pour les sections */
-.section-animate {
-    animation: fadeInUp 0.6s ease-out;
-}
-
-.card-animate {
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.card-animate:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
-}
-
-/* Style pour les badges de compétences */
-.badge-skill {
-    @apply px-4 py-2 rounded-full text-sm font-medium shadow;
-}
-
-/* Keyframes */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(12px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+@layer base {
+  html, body, #root { min-height: 100vh; height: 100%; margin: 0; }
 }

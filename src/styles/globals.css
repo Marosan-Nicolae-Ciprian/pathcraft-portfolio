@@ -1,0 +1,179 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  
+  /* Portfolio Dark Purple / Dark Romance / Anime Tech Premium */
+  /* Inspired by cyber elegance, nocturnal aesthetics, and mature anime visuals */
+  
+  --background: #0a0612; /* Deep purple-black */
+  --foreground: #ede9f5; /* Soft lavender white */
+  --card: #12091d; /* Dark aubergine */
+  --card-foreground: #ede9f5;
+  --popover: #12091d;
+  --popover-foreground: #ede9f5;
+  
+  /* Primary: Elegant electric violet */
+  --primary: #a78bfa; /* Violet 400 */
+  --primary-foreground: #0a0612;
+  
+  /* Secondary: Graphite purple */
+  --secondary: #1e1629;
+  --secondary-foreground: #c4b5fd; /* Lavender */
+  
+  --muted: #1e1629;
+  --muted-foreground: #a8a0b8; /* Grayed lavender */
+  
+  /* Accent: Magenta/rose neon (discreet) */
+  --accent: #e879f9; /* Fuchsia 400 */
+  --accent-foreground: #0a0612;
+  
+  /* Accent blue: Cool cyan (very subtle) */
+  --accent-blue: #67e8f9; /* Cyan 300 */
+  
+  --destructive: #f87171;
+  --destructive-foreground: #ffffff;
+  
+  --border: #2d1f3d; /* Subtle violet border */
+  --input: #1e1629;
+  --input-background: #12091d;
+  --switch-background: #1e1629;
+  
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: #a78bfa;
+  --radius: 0.5rem;
+  
+  /* Additional custom properties for visual effects */
+  --glow-primary: rgba(167, 139, 250, 0.4);
+  --glow-accent: rgba(232, 121, 249, 0.3);
+  --gradient-primary: linear-gradient(135deg, #a78bfa 0%, #c084fc 100%);
+  --gradient-accent: linear-gradient(135deg, #e879f9 0%, #f0abfc 100%);
+  --gradient-dark: linear-gradient(180deg, #0a0612 0%, #12091d 100%);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent-blue: var(--accent-blue);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image: 
+      radial-gradient(ellipse at top, rgba(167, 139, 250, 0.03) 0%, transparent 50%),
+      radial-gradient(ellipse at bottom, rgba(232, 121, 249, 0.02) 0%, transparent 50%);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/**
+ * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+  :where(:not(:has([class*=' text-']), :not(:has([class^='text-'])))) {
+    h1 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h3 {
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h4 {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    label {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    button {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+  }
+}
+
+/* Custom utility classes for visual effects */
+@layer utilities {
+  .glow-primary {
+    box-shadow: 0 0 20px var(--glow-primary);
+  }
+  
+  .glow-accent {
+    box-shadow: 0 0 20px var(--glow-accent);
+  }
+  
+  .gradient-text-primary {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .gradient-text-accent {
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
